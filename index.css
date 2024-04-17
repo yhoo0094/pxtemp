@@ -9,7 +9,7 @@
 }
 
 .itemCard {
-    flex: 0 0 17%;
+    flex: 0 0 22%;
     padding: 10px;
     margin: 10px;
     border: solid 1px black;
@@ -22,4 +22,12 @@
 
 .itemPrice{
 	text-align: right;
+}
+
+.itemBtn{
+	text-align: right;
+}
+
+.itemInfo{
+	margin: 5px 0;
 }
