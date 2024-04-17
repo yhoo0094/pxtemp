@@ -6,13 +6,15 @@ $(()=>{
 function setData() {
 	let totalTag = '';
 	for(let item of data){
-		let tag = '<div class="itemCard">'
-					+ '<div class="itemImgBox itemInfo">'
-						+ '<img src="./images/' + item.IMG + '" class="itemImg">'
+		let tag = '<div class="itemBlock">'
+					+ '<div class="itemCard">'
+						+ '<div class="itemImgBox itemInfo">'
+							+ '<img src="./images/' + item.IMG + '" class="itemImg">'
+						+ '</div>'
+						+ '<div class="itemName itemInfo">' + item.ITM_NM + '(' + item.UNIT + '개)</div>'
+						+ '<div class="itemPrice itemInfo">' + item.PRICE * item.UNIT + '원</div>'
+						+ '<div class="itemBtn itemInfo"><button type="button" class="btn btn-primary" onClick="copyNm(this)" data-nm="' + item.ITM_NM + '">상품명 복사</button></div>'
 					+ '</div>'
-					+ '<div class="itemName itemInfo">' + item.ITM_NM + '(' + item.UNIT + '개)</div>'
-					+ '<div class="itemPrice itemInfo">' + item.PRICE * item.UNIT + '원</div>'
-					+ '<div class="itemBtn itemInfo"><button type="button" onClick="copyNm(this)" data-nm="' + item.ITM_NM + '">상품명 복사</button></div>'
 				+ '</div>';
 		totalTag += tag;		
 	}
