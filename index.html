@@ -11,12 +11,16 @@
 
 <title>와싸다!</title>
 <link rel="shortcut icon" type="image/x-icon" href="./images/title_icon.png"> <!-- title 아이콘 변경 -->	
+<link rel="stylesheet" href="./index.css">
 
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script type="text/javascript" src="./data.js"></script>
+<script type="text/javascript" src="./index.js"></script>
 </head>
 <script>
 </script>
 <body>
-	<div id="searchDiv">
+	<div id="searchBox">
 		<select id="">
 			<option value="">전체</option>
 			<option value="">화장품</option>
@@ -27,8 +31,36 @@
 		<input type="text">
 		<button type="button">검색</button>
 	</div>
-	<div id="contentDiv">
-		
+	<div id="itemBox" class="itemBox">
+		<div class="itemCard">
+			<div class="itemImgBox">
+				<img src="./images/image.png" class="itemImg">
+			</div>
+			<p class="itemName">Name</p>
+			<p class="itemPrice">11,000</p>
+		</div>
+		<div class="itemCard">
+			<div class="itemImgBox">
+				<img src="./images/image.png" class="itemImg">
+			</div>
+			<p class="itemName">Name</p>
+			<p class="itemPrice">11,000</p>
+		</div>		
+		<div class="itemCard">
+			<img src="./images/image.png" class="itemImg">
+			<p class="itemName">Name</p>
+			<p class="itemPrice">11,000</p>
+		</div>
+		<div class="itemCard">
+			<img src="./images/image.png" class="itemImg">
+			<p class="itemName">Name</p>
+			<p class="itemPrice">11,000</p>
+		</div>
+		<div class="itemCard">
+			<img src="./images/image.png" class="itemImg">
+			<p class="itemName">Name</p>
+			<p class="itemPrice">11,000</p>
+		</div>
 	</div>
 </body>
 </html>
