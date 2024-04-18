@@ -82,11 +82,14 @@ function setData() {
 function copyNm(item){
 	navigator.clipboard.writeText($(item).data('nm'));
 	
-	//복사 알림
-	$('#copyPanel').css('display','flex');	
-	setTimeout(() => {
-	  $('#copyPanel').css('display','none');	
-	}, "500");		
+	//모바일은 복사 알림 X
+	if(!isMobileDevice()){
+		//복사 알림
+		$('#copyPanel').css('display','flex');	
+		setTimeout(() => {
+		  $('#copyPanel').css('display','none');	
+		}, "500");			
+	}
 }
 
 //천 단위 구분 기호
@@ -104,3 +107,11 @@ function loadingStart(){
 function loadingEnd(){
 	$('#loadingPanel').css('display','none');	
 };
+
+//모바일 여부 판단
+function isMobileDevice() {
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+    // 모바일 디바이스의 경우 일반적으로 찾을 수 있는 키워드
+    return /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent);
+}
