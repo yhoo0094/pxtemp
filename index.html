@@ -30,7 +30,7 @@
 			<option value="ITM_NM">상품명 정렬</option>
 			<option value="PRICE">가격 정렬</option>
 		</select>
-		<input type="text" id="schItmNm" class="form-control schTag">
+		<input type="text" id="schItmNm" class="form-control schTag" onkeypress="if(event.keyCode == 13){setData()}">
 		<button type="button" class="btn btn-primary schTag" onClick="setData()">검색</button>
 	</div>
 	<div id="itemBox" class="itemBox"></div>
