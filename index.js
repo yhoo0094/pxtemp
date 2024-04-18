@@ -1,15 +1,63 @@
 $(()=>{
-	setData();
+	setSchOption();	//조회조건 세팅
+	setData();		//데이터 세팅
 })
+
+//조회조건 세팅
+function setSchOption() {
+	let typeArr = [];
+	for(let item of data){
+		if(!typeArr.includes(item.TYPE)){
+			typeArr.push(item.TYPE);
+			let tag = '<option value="' + item.TYPE +'">' + item.TYPE +'</option>'
+			$('#schType').append(tag);
+		}
+	}
+}
 
 //데이터 세팅
 function setData() {
 	let totalTag = '';
+	
+	//검색 조건에 따라 필터링
+	let targetData = [];
 	for(let item of data){
-		let schItmNm = $('#schItmNm').val();
+		//분류 필터링
+		let schType = $('#schType').val();
+		if(schType != '' && item.TYPE != schType){
+			continue;
+		}
 		
+		//상품명 필터링
+		let schItmNm = $('#schItmNm').val().trim();
+		if(schItmNm != '' && !item.ITM_NM.includes(schItmNm)){
+			continue;
+		}
 		
-		
+		targetData.push(item);
+	}
+
+    // 데이터 정렬
+    let orderCol = $('#schOrder').val();
+    targetData.sort((a, b) => {
+        let nameA = a[orderCol];
+        let nameB = b[orderCol];
+        
+        if(orderCol == 'PRICE'){
+			nameA = a['PRICE'] * a['UNIT'];
+			nameB = b['PRICE'] * b['UNIT'];
+		}
+
+        if (nameA < nameB) {
+            return -1;
+        }
+        if (nameA > nameB) {
+            return 1;
+        }
+        return 0; // 이름이 같을 경우
+    });
+	
+	for(let item of targetData){
 		let tag = '<div class="itemBlock">'
 					+ '<div class="itemCard">'
 						+ '<div class="itemImgBox itemInfo">'

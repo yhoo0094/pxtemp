@@ -9,7 +9,7 @@ button{
 .itemBox{
 	display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: left;
 }
 
 .itemCard {
@@ -38,6 +38,11 @@ button{
 
 .schTag{
 	margin: 2px;
+}
+
+.itemName {
+    display: inline-block;
+    min-height: 3rem;
 }
 
 #searchBox{
