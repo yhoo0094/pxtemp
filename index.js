@@ -44,7 +44,6 @@ function setData() {
     targetData.sort((a, b) => {
         let nameA = a[orderCol];
         let nameB = b[orderCol];
-        
         if(orderCol == 'PRICE'){
 			nameA = a['PRICE'] * a['UNIT'];
 			nameB = b['PRICE'] * b['UNIT'];
@@ -74,7 +73,9 @@ function setData() {
 	}
 	$('#itemBox').html(totalTag);
 	
-	loadingEnd();
+	setTimeout(() => {
+	  loadingEnd();
+	}, "500");
 }
 
 //복사 이벤트
