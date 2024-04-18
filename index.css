@@ -36,6 +36,16 @@ button{
 	margin: 5px 0;
 }
 
+.schTag{
+	margin: 2px;
+}
+
+#searchBox{
+	display: flex;
+	flex-wrap: wrap; /* 요소가 넘칠 경우 다음 줄로 넘김 */
+	justify-content: left;
+}
+
 /* 반응형 스타일 시작 */
 /* 화면이 ?px 이상일 때 */
 @media screen and (min-width: 100px){
@@ -45,6 +55,14 @@ button{
 	html{
 		font-size: 10px;
 	}
+
+	#schType, #schOrder{
+		width: 100%;
+	}	
+	
+	#schItmNm{
+	    flex: 1 0 80%; 
+	}	
 }
 @media screen and (min-width: 300px){
 	.itemBlock{
@@ -53,6 +71,10 @@ button{
 	html{
 		font-size: 11px;
 	}	
+	
+	#schType, #schOrder{
+		width: 140px;
+	}		
 }
 @media screen and (min-width: 600px){
 	.itemBlock{
@@ -61,6 +83,10 @@ button{
 	html{
 		font-size: 12px;
 	}
+	
+	#schItmNm{
+	    flex: 1 0 0; 
+	}		
 }    
 @media screen and (min-width: 900px){
 	.itemBlock{

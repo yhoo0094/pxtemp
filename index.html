@@ -23,15 +23,22 @@
 </script>
 <body>
 	<div id="searchBox">
-		<select id="">
-			<option value="">전체</option>
+		<select id="schType" class="form-select schTag">
+			<option value="">분류</option>
 			<option value="">화장품</option>
 			<option value="">식품</option>
 			<option value="">영양제</option>
 			<option value="">기타</option>
 		</select>
-		<input type="text">
-		<button type="button">검색</button>
+		<select id="schOrder" class="form-select schTag">
+			<option value="">정렬</option>
+			<option value="">화장품</option>
+			<option value="">식품</option>
+			<option value="">영양제</option>
+			<option value="">기타</option>
+		</select>
+		<input type="text" id="schItmNm" class="form-control schTag">
+		<button type="button" class="btn btn-primary schTag">검색</button>
 	</div>
 	<div id="itemBox" class="itemBox"></div>
 </body>
