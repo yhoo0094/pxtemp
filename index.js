@@ -81,6 +81,12 @@ function setData() {
 //복사 이벤트
 function copyNm(item){
 	navigator.clipboard.writeText($(item).data('nm'));
+	
+	//복사 알림
+	$('#copyPanel').css('display','flex');	
+	setTimeout(() => {
+	  $('#copyPanel').css('display','none');	
+	}, "500");		
 }
 
 //천 단위 구분 기호

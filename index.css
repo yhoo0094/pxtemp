@@ -80,6 +80,15 @@ button{
 	animation: flicker 1100ms infinite alternate;
 }
 
+.copyText{
+    position: fixed;
+    font-weight: bold;
+    background-color: #3f2c2ce3;
+    padding: 10px 40px;
+    color: white;
+    border-radius: 12px;
+}
+
 @keyframes spinner{
 	from {transform: rotate(0deg);}
 	to   {transform: rotate(359deg);}
