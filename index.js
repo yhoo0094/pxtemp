@@ -6,6 +6,10 @@ $(()=>{
 function setData() {
 	let totalTag = '';
 	for(let item of data){
+		let schItmNm = $('#schItmNm').val();
+		
+		
+		
 		let tag = '<div class="itemBlock">'
 					+ '<div class="itemCard">'
 						+ '<div class="itemImgBox itemInfo">'

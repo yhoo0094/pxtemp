@@ -6,7 +6,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="/">	<!-- 공유시 이동 url -->
 <meta property="og:title" content="와싸다!"> 						<!-- 타이틀 -->
-<meta property="og:image" content="./images/kakao_icon.png"> 	<!-- 미리보기 될 이미지 -->
+<meta property="og:image" content="./images/kakao_icon.png"> 	<!-- 미리보기 될 이미지(410x200px 을 권장) -->
 <meta property="og:description" content="와싸다! 초저가 구매대행"> 	<!-- URL 요약 --> 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -38,7 +38,7 @@
 			<option value="">기타</option>
 		</select>
 		<input type="text" id="schItmNm" class="form-control schTag">
-		<button type="button" class="btn btn-primary schTag">검색</button>
+		<button type="button" class="btn btn-primary schTag" onClick="setData()">검색</button>
 	</div>
 	<div id="itemBox" class="itemBox"></div>
 </body>
