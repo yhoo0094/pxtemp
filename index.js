@@ -80,8 +80,13 @@ function setData() {
 
 //복사 이벤트
 function copyNm(item){
-//	navigator.clipboard.writeText($(item).data('nm'));
-	window.clipboardData.setData("text/plain", $(item).data('nm'))
+	
+	if (navigator.clipboard && navigator.clipboard.writeText) {
+	    navigator.clipboard.writeText($(item).data('nm'))
+	} else {
+	    // 대체 방법 호출
+	    copyToClipboard($(item).data('nm'));
+	}	
 	
 	//모바일은 복사 알림 X
 	if(!isMobileDevice()){
@@ -91,6 +96,23 @@ function copyNm(item){
 		  $('#copyPanel').css('display','none');	
 		}, "500");			
 	}
+}
+
+//navigator.clipboard를 지원하지 않는 브라우저 대응
+function copyToClipboard(text) {
+    var textarea = document.createElement('textarea');
+    textarea.textContent = text;
+    textarea.style.position = "fixed";  // DOM에서 보이지 않도록 설정
+    document.body.appendChild(textarea);
+    textarea.select();  // 텍스트 영역을 선택
+    try {
+        return document.execCommand("copy");  // 클립보드에 복사
+    } catch (e) {
+        alert("복사 실패하였습니다.", e);
+        return false;
+    } finally {
+        document.body.removeChild(textarea);
+    }
 }
 
 //천 단위 구분 기호
