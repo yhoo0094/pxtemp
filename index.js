@@ -31,8 +31,8 @@ function setData() {
 		}
 		
 		//상품명 필터링
-		let schItmNm = $('#schItmNm').val().trim();
-		if(schItmNm != '' && !item.ITM_NM.includes(schItmNm)){
+		let schItmNm = $('#schItmNm').val().trim().toUpperCase();
+		if(schItmNm != '' && !item.ITM_NM.toUpperCase().includes(schItmNm)){
 			continue;
 		}
 		
