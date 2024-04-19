@@ -80,7 +80,8 @@ function setData() {
 
 //복사 이벤트
 function copyNm(item){
-	navigator.clipboard.writeText($(item).data('nm'));
+//	navigator.clipboard.writeText($(item).data('nm'));
+	window.clipboardData.setData("text/plain", $(item).data('nm'))
 	
 	//모바일은 복사 알림 X
 	if(!isMobileDevice()){
