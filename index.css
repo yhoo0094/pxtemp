@@ -6,6 +6,10 @@ button{
 	width: 80%;
 }
 
+.itemBlock {
+    box-sizing: border-box;
+}
+
 .itemBox{
 	display: flex;
     flex-wrap: wrap;
