@@ -11,6 +11,8 @@ const data = [
 {"ITM_SEQ":"10","TYPE":"식품","TYPE_DTL":"과자","ITM_NM":"프링글스 버터카라멜","PRICE":"1250","UNIT":"12","":"15000","IMG":"프링글스 버터카라멜.jpg"},
 {"ITM_SEQ":"11","TYPE":"식품","TYPE_DTL":"과자","ITM_NM":"프링글스 핫앤스파이시","PRICE":"1250","UNIT":"12","":"15000","IMG":"프링글스 핫앤스파이시.jpg"},
 {"ITM_SEQ":"12","TYPE":"식품","TYPE_DTL":"과자","ITM_NM":"키커바","PRICE":"450","UNIT":"15","":"6750","IMG":"키커바.png"},
+{"ITM_SEQ":"12","TYPE":"식품","TYPE_DTL":"과자","ITM_NM":"코주부 CLASSIC 육포 Mild 130g","PRICE":"7130","UNIT":"1","":"7130","IMG":"코주부 CLASSIC 육포 Mild 130g.jpg"},
+{"ITM_SEQ":"12","TYPE":"식품","TYPE_DTL":"과자","ITM_NM":"코주부 CLASSIC 육포 HOT & SPICY 130g","PRICE":"6040","UNIT":"1","":"6040","IMG":"코주부 CLASSIC 육포 HOT & SPICY 130g.jpg"},
 {"ITM_SEQ":"13","TYPE":"식품","TYPE_DTL":"음료","ITM_NM":"펩시제로슈거라임 500ml","PRICE":"680","UNIT":"20","":"13600","IMG":"펩시제로슈거라임 500ml.jpg"},
 {"ITM_SEQ":"14","TYPE":"식품","TYPE_DTL":"음료","ITM_NM":"핫식스더킹러쉬 355ml","PRICE":"710","UNIT":"24","":"17040","IMG":"핫식스더킹러쉬 355ml.jpg"},
 {"ITM_SEQ":"15","TYPE":"식품","TYPE_DTL":"음료","ITM_NM":"핫식스더킹파워 355ml","PRICE":"740","UNIT":"24","":"17760","IMG":"핫식스더킹파워 355ml.jpg"},
@@ -46,4 +48,5 @@ const data = [
 {"ITM_SEQ":"45","TYPE":"화장품","TYPE_DTL":"영양크림","ITM_NM":"다이아몬드 리페어 퍼펙트 세트","PRICE":"38930","UNIT":"1","":"38930","IMG":"다이아몬드 리페어 퍼펙트 세트.jpg"},
 {"ITM_SEQ":"46","TYPE":"화장품","TYPE_DTL":"폼클렌징","ITM_NM":"닥터지 레드 블레미쉬 모이스처 클렌징 폼","PRICE":"4320","UNIT":"1","":"4320","IMG":"닥터지 레드 블레미쉬 모이스처 클렌징 폼.jpg"},
 {"ITM_SEQ":"47","TYPE":"화장품","TYPE_DTL":"폼클렌징","ITM_NM":"뉴트로지나 딥클린 아크네 포밍","PRICE":"4390","UNIT":"1","":"4390","IMG":"뉴트로지나 딥클린 아크네 포밍.jpg"},
+
 ]
