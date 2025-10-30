@@ -62,7 +62,7 @@ function setData() {
 		let tag = '<div class="itemBlock">'
 					+ '<div class="itemCard">'
 						+ '<div class="itemImgBox itemInfo">'
-							+ '<img src="./images/' + item.IMG + '" class="itemImg">'
+							+ '<img src="./images/' + item.IMG + '" onerror="this.src=\'./images/image.png\';" class="itemImg">'
 						+ '</div>'
 						+ '<div class="itemName itemInfo">' + item.ITM_NM + '(' + item.UNIT + '개)</div>'
 						+ '<div class="itemPrice itemInfo">' + formatNumber(item.PRICE * item.UNIT )+ '원</div>'
